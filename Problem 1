@@ -1,20 +1,31 @@
-//Problem 1:
+import java.util.Scanner;
+
 class Student {
-   String name;
-   int ID;
-   double CGPA;
- void inputDetails() {
-   Scanner scanner = new Scanner(System.in);
-   System.out.print("Enter Name: ");
-   name = scanner.nextLine();
-   System.out.print("Enter ID: ");
-   ID = scanner.nextInt();
-   System.out.print("Enter CGPA: ");
-   CGPA = scanner.nextDouble();
- }
-   void displayDetails() {
-     System.out.println("Name: " + name);
-     System.out.println("ID: " + ID);
-     System.out.println("CGPA: " + CGPA);
-  }
+    String name;
+    int ID;
+    double CGPA;
+
+    void inputDetails() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter Name: ");
+        name = scanner.nextLine();
+        System.out.print("Enter ID: ");
+        ID = scanner.nextInt();
+        System.out.print("Enter CGPA: ");
+        CGPA = scanner.nextDouble();
+    }
+
+    void displayDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("ID: " + ID);
+        System.out.println("CGPA: " + CGPA);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student student = new Student();
+        student.inputDetails();
+        student.displayDetails();
+    }
 }
